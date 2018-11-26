@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ultimate Tic-Tac-Toe</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+    <style>
+        .btn{
+            width: 70px;
+            height: 70px;
+            font-size: 30px;
+            color: #0f0f0f;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/ready.js"></script>
+    <script type="text/javascript" src="js/buttonArray.js"></script>
+    <script type="text/javascript" src="js/play.js"></script>
+    <script type="text/javascript" src="js/checkWins.js"></script>
+
+
+</head>
+<body>
+<!-- turn of the player -->
+<div id="player_turn" class="alert alert-success" role="alert" style="position: absolute; TOP: 30px; LEFT:670px;">
+    Player Turn: O
+</div>
+<!------------------------->
+<!-- playing area -->
+<div >
+    <!-- first line-->
+    <button type="button" id="btn1" class="btn btn-primary topLeft game1" style="position: absolute; TOP:100px;  LEFT:420px;" ></button>
+    <button type="button" id="btn2" class="btn btn-primary topMiddle game1" style="position: absolute; TOP:100px;  LEFT:490px;" ></button>
+    <button type="button" id="btn3" class="btn btn-primary topRight game1" style="position: absolute; TOP:100px;  LEFT:560px;" ></button>
+    <button type="button" id="btn4" class="btn btn-danger topLeft game2" style="position: absolute; TOP:100px;  LEFT:630px;" ></button>
+    <button type="button" id="btn5" class="btn btn-danger topMiddle game2" style="position: absolute; TOP:100px;  LEFT:700px;" ></button>
+    <button type="button" id="btn6" class="btn btn-danger topRight game2" style="position: absolute; TOP:100px;  LEFT:770px;" ></button>
+    <button type="button" id="btn7" class="btn btn-primary topLeft game3" style="position: absolute; TOP:100px;  LEFT:840px;" ></button>
+    <button type="button" id="btn8" class="btn btn-primary topMiddle game3" style="position: absolute; TOP:100px;  LEFT:910px;" ></button>
+    <button type="button" id="btn9" class="btn btn-primary topRight game3" style="position: absolute; TOP:100px;  LEFT:980px;" ></button>
+    <!---------------->
+    <!-- second line-->
+    <button type="button" id="btn10" class="btn btn-primary centerLeft game1" style="position: absolute; TOP:170px;  LEFT:420px;" ></button>
+    <button type="button" id="btn11" class="btn btn-primary centerMiddle game1" style="position: absolute; TOP:170px;  LEFT:490px;" ></button>
+    <button type="button" id="btn12" class="btn btn-primary centerRight game1" style="position: absolute; TOP:170px;  LEFT:560px;" ></button>
+    <button type="button" id="btn13" class="btn btn-danger centerLeft game2" style="position: absolute; TOP:170px;  LEFT:630px;" ></button>
+    <button type="button" id="btn14" class="btn btn-danger centerMiddle game2" style="position: absolute; TOP:170px;  LEFT:700px;" ></button>
+    <button type="button" id="btn15" class="btn btn-danger centerRight game2" style="position: absolute; TOP:170px;  LEFT:770px;" ></button>
+    <button type="button" id="btn16" class="btn btn-primary centerLeft game3" style="position: absolute; TOP:170px;  LEFT:840px;" ></button>
+    <button type="button" id="btn17" class="btn btn-primary centerMiddle game3" style="position: absolute; TOP:170px;  LEFT:910px;" ></button>
+    <button type="button" id="btn18" class="btn btn-primary centerRight game3" style="position: absolute; TOP:170px;  LEFT:980px;" ></button>
+    <!---------------->
+    <!-- third line-->
+    <button type="button" id="btn19" class="btn btn-primary bottomLeft game1" style="position: absolute; TOP:240px;  LEFT:420px;" ></button>
+    <button type="button" id="btn20" class="btn btn-primary bottomMiddle game1" style="position: absolute; TOP:240px;  LEFT:490px;" ></button>
+    <button type="button" id="btn21" class="btn btn-primary bottomRight game1" style="position: absolute; TOP:240px;  LEFT:560px;" ></button>
+    <button type="button" id="btn22" class="btn btn-danger bottomLeft game2" style="position: absolute; TOP:240px;  LEFT:630px;" ></button>
+    <button type="button" id="btn23" class="btn btn-danger bottomMiddle game2" style="position: absolute; TOP:240px;  LEFT:700px;" ></button>
+    <button type="button" id="btn24" class="btn btn-danger bottomRight game2" style="position: absolute; TOP:240px;  LEFT:770px;" ></button>
+    <button type="button" id="btn25" class="btn btn-primary bottomLeft game3" style="position: absolute; TOP:240px;  LEFT:840px;" ></button>
+    <button type="button" id="btn26" class="btn btn-primary bottomMiddle game3" style="position: absolute; TOP:240px;  LEFT:910px;" ></button>
+    <button type="button" id="btn27" class="btn btn-primary bottomRight game3" style="position: absolute; TOP:240px;  LEFT:980px;" ></button>
+    <!---------------->
+    <!-- forth line-->
+    <button type="button" id="btn28" class="btn btn-danger topLeft game4" style="position: absolute; TOP:310px;  LEFT:420px;" ></button>
+    <button type="button" id="btn29" class="btn btn-danger topMiddle game4" style="position: absolute; TOP:310px;  LEFT:490px;" ></button>
+    <button type="button" id="btn30" class="btn btn-danger topRight game4" style="position: absolute; TOP:310px;  LEFT:560px;" ></button>
+    <button type="button" id="btn31" class="btn btn-primary topLeft game5" style="position: absolute; TOP:310px;  LEFT:630px; background-color: yellow;"></button>
+    <button type="button" id="btn32" class="btn btn-primary topMiddle game5" style="position: absolute; TOP:310px;  LEFT:700px; background-color: yellow;"></button>
+    <button type="button" id="btn33" class="btn btn-primary topRight game5" style="position: absolute; TOP:310px;  LEFT:770px; background-color: yellow;"></button>
+    <button type="button" id="btn34" class="btn btn-danger topLeft game6" style="position: absolute; TOP:310px;  LEFT:840px;" ></button>
+    <button type="button" id="btn35" class="btn btn-danger topMiddle game6" style="position: absolute; TOP:310px;  LEFT:910px;" ></button>
+    <button type="button" id="btn36" class="btn btn-danger topRight game6" style="position: absolute; TOP:310px;  LEFT:980px;" ></button>
+    <!---------------->
+    <!-- fifth line-->
+    <button type="button" id="btn37" class="btn btn-danger centerLeft game4" style="position: absolute; TOP:380px;  LEFT:420px;" ></button>
+    <button type="button" id="btn38" class="btn btn-danger centerMiddle game4" style="position: absolute; TOP:380px;  LEFT:490px;" ></button>
+    <button type="button" id="btn39" class="btn btn-danger centerRight game4" style="position: absolute; TOP:380px;  LEFT:560px;" ></button>
+    <button type="button" id="btn40" class="btn btn-primary centerLeft game5" style="position: absolute; TOP:380px;  LEFT:630px; background-color: yellow;" ></button>
+    <button type="button" id="btn41" class="btn btn-primary centerMiddle game5" style="position: absolute; TOP:380px;  LEFT:700px; background-color: yellow;" >X</button>
+    <button type="button" id="btn42" class="btn btn-primary centerRight game5" style="position: absolute; TOP:380px;  LEFT:770px; background-color: yellow;" ></button>
+    <button type="button" id="btn43" class="btn btn-danger centerLeft game6" style="position: absolute; TOP:380px;  LEFT:840px;" ></button>
+    <button type="button" id="btn44" class="btn btn-danger centerMiddle game6" style="position: absolute; TOP:380px;  LEFT:910px;" ></button>
+    <button type="button" id="btn45" class="btn btn-danger centerRight game6" style="position: absolute; TOP:380px;  LEFT:980px;" ></button>
+    <!---------------->
+    <!-- sixth line-->
+    <button type="button" id="btn46" class="btn btn-danger bottomLeft game4" style="position: absolute; TOP:450px;  LEFT:420px;" ></button>
+    <button type="button" id="btn47" class="btn btn-danger bottomMiddle game4" style="position: absolute; TOP:450px;  LEFT:490px;" ></button>
+    <button type="button" id="btn48" class="btn btn-danger bottomRight game4" style="position: absolute; TOP:450px;  LEFT:560px;"></button>
+    <button type="button" id="btn49" class="btn btn-primary bottomLeft game5" style="position: absolute; TOP:450px;  LEFT:630px; background-color: yellow;" ></button>
+    <button type="button" id="btn50" class="btn btn-primary bottomMiddle game5" style="position: absolute; TOP:450px;  LEFT:700px; background-color: yellow;" ></button>
+    <button type="button" id="btn51" class="btn btn-primary bottomRight game5" style="position: absolute; TOP:450px;  LEFT:770px; background-color: yellow;" ></button>
+    <button type="button" id="btn52" class="btn btn-danger bottomLeft game6" style="position: absolute; TOP:450px;  LEFT:840px;" ></button>
+    <button type="button" id="btn53" class="btn btn-danger bottomMiddle game6" style="position: absolute; TOP:450px;  LEFT:910px;"></button>
+    <button type="button" id="btn54" class="btn btn-danger bottomRight game6" style="position: absolute; TOP:450px;  LEFT:980px;"></button>
+    <!---------------->
+    <!-- seventh line-->
+    <button type="button" id="btn55" class="btn btn-primary topLeft game7" style="position: absolute; TOP:520px;  LEFT:420px;"></button>
+    <button type="button" id="btn56" class="btn btn-primary topMiddle game7" style="position: absolute; TOP:520px;  LEFT:490px;"></button>
+    <button type="button" id="btn57" class="btn btn-primary topRight game7" style="position: absolute; TOP:520px;  LEFT:560px;"></button>
+    <button type="button" id="btn58" class="btn btn-danger topLeft game8" style="position: absolute; TOP:520px;  LEFT:630px;"></button>
+    <button type="button" id="btn59" class="btn btn-danger topMiddle game8" style="position: absolute; TOP:520px;  LEFT:700px;"></button>
+    <button type="button" id="btn60" class="btn btn-danger topRight game8" style="position: absolute; TOP:520px;  LEFT:770px;"></button>
+    <button type="button" id="btn61" class="btn btn-primary topLeft game9" style="position: absolute; TOP:520px;  LEFT:840px;"></button>
+    <button type="button" id="btn62" class="btn btn-primary topMiddle game9" style="position: absolute; TOP:520px;  LEFT:910px;"></button>
+    <button type="button" id="btn63" class="btn btn-primary topRight game9" style="position: absolute; TOP:520px;  LEFT:980px;"></button>
+    <!---------------->
+    <!-- eightth line-->
+    <button type="button" id="btn64" class="btn btn-primary centerLeft game7" style="position: absolute; TOP:590px;  LEFT:420px;"></button>
+    <button type="button" id="btn65" class="btn btn-primary centerMiddle game7" style="position: absolute; TOP:590px;  LEFT:490px;"></button>
+    <button type="button" id="btn66" class="btn btn-primary centerRight game7" style="position: absolute; TOP:590px;  LEFT:560px;"></button>
+    <button type="button" id="btn67" class="btn btn-danger centerLeft game8" style="position: absolute; TOP:590px;  LEFT:630px;"></button>
+    <button type="button" id="btn68" class="btn btn-danger centerMiddle game8" style="position: absolute; TOP:590px;  LEFT:700px;"></button>
+    <button type="button" id="btn69" class="btn btn-danger centerRight game8" style="position: absolute; TOP:590px;  LEFT:770px;"></button>
+    <button type="button" id="btn70" class="btn btn-primary centerLeft game9" style="position: absolute; TOP:590px;  LEFT:840px;"></button>
+    <button type="button" id="btn71" class="btn btn-primary centerMiddle game9" style="position: absolute; TOP:590px;  LEFT:910px;"></button>
+    <button type="button" id="btn72" class="btn btn-primary centerRight game9" style="position: absolute; TOP:590px;  LEFT:980px;"></button>
+    <!---------------->
+    <!-- nineth line-->
+    <button type="button" id="btn73" class="btn btn-primary bottomLeft game7" style="position: absolute; TOP:660px;  LEFT:420px;"></button>
+    <button type="button" id="btn74" class="btn btn-primary bottomMiddle game7" style="position: absolute; TOP:660px;  LEFT:490px;"></button>
+    <button type="button" id="btn75" class="btn btn-primary bottomRight game7" style="position: absolute; TOP:660px;  LEFT:560px;"></button>
+    <button type="button" id="btn76" class="btn btn-danger bottomLeft game8" style="position: absolute; TOP:660px;  LEFT:630px;"></button>
+    <button type="button" id="btn77" class="btn btn-danger bottomMiddle game8" style="position: absolute; TOP:660px;  LEFT:700px;"></button>
+    <button type="button" id="btn78" class="btn btn-danger bottomRight game8" style="position: absolute; TOP:660px;  LEFT:770px;"></button>
+    <button type="button" id="btn79" class="btn btn-primary bottomLeft game9" style="position: absolute; TOP:660px;  LEFT:840px;"></button>
+    <button type="button" id="btn80" class="btn btn-primary bottomMiddle game9" style="position: absolute; TOP:660px;  LEFT:910px;"></button>
+    <button type="button" id="btn81" class="btn btn-primary bottomRight game9" style="position: absolute; TOP:660px;  LEFT:980px;"></button>
+    <!---------------->
+</div>
+<!------------------>
+<!-- big table sign -->
+<div id="big_table_sign" class="alert alert-success" role="alert" style="position: absolute; TOP: 240px; LEFT:160px;">
+    BIG TABLE
+</div>
+<!------------------------->
+
+<!-- Big Table for the MAJOR Match--->
+<div>
+    <button type="button" id="big1" class="btn btn-warning" style="position: absolute; TOP:310px;  LEFT:100px;"></button>
+    <button type="button" id="big2" class="btn btn-warning" style="position: absolute; TOP:310px;  LEFT:170px;"></button>
+    <button type="button" id="big3" class="btn btn-warning" style="position: absolute; TOP:310px;  LEFT:240px;"></button>
+    <button type="button" id="big4" class="btn btn-warning" style="position: absolute; TOP:380px;  LEFT:100px;"></button>
+    <button type="button" id="big5" class="btn btn-warning" style="position: absolute; TOP:380px;  LEFT:170px;"></button>
+    <button type="button" id="big6" class="btn btn-warning" style="position: absolute; TOP:380px;  LEFT:240px;"></button>
+    <button type="button" id="big7" class="btn btn-warning" style="position: absolute; TOP:450px;  LEFT:100px;"></button>
+    <button type="button" id="big8" class="btn btn-warning" style="position: absolute; TOP:450px;  LEFT:170px;"></button>
+    <button type="button" id="big9" class="btn btn-warning" style="position: absolute; TOP:450px;  LEFT:240px;"></button>
+
+</div>
+<!------------------>
+</body>
+</html>

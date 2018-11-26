@@ -1,0 +1,142 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+h1.carousel{color: black;
+text-align: center;
+}
+
+img{ width: 100%;
+}
+
+img.first-slide{ width:1500px;
+height: 300px;
+position: center;
+}
+
+img.second-slide{ width: 1500px;
+heigth: 300px;
+}
+
+img.third-slide{ width: 1500px;
+heigth: 300px;
+}
+
+img.leonardo{width:400px;
+height:470px;
+margin-left: 1em;
+margin-right: none;
+}
+
+img.raphael{width:400px;
+height:470px;
+margin-left: 1em;
+margin-right: none;
+}
+
+img.donatello{width:400px;
+height:400px;
+margin-left: 1em;
+margin-right: none;
+}
+
+img.michelangelo{width:400px;
+height:400px;
+margin-left: 1em;
+margin-right: none;
+}
+
+h1.leonardo { color:#11f;
+text-align: center;
+margin: 1em;
+font-family:Lucida Handwriting;
+}
+
+h2.leonardo { color:#11f;
+text-align: center;
+margin: 1em;
+font-family: Lucida Handwriting;
+}
+
+h1.raphael { color:#f11;
+text-align: center;
+margin: 1em;
+font-family:Lucida Handwriting;
+}
+
+h2.raphael { color:#f11;
+text-align: center;
+margin: 1em;
+font-family: Lucida Handwriting;
+}
+
+h1.donatello { color:#c1c;
+text-align: center;
+margin: 1em;
+font-family:Lucida Handwriting;
+}
+
+h2.donatello { color:#c1c;
+text-align: center;
+margin: 1em;
+font-family: Lucida Handwriting;
+}
+
+h1.michelangelo { color:#ebb217;
+text-align: center;
+margin: 1em;
+font-family:Lucida Handwriting;
+}
+
+h2.michelangelo { color:#ebb217;
+text-align: center;
+margin: 1em;
+font-family: Lucida Handwriting;
+}
+
+h1.allies { color:#1ff;
+text-align: center;
+margin: 1em;
+font-family:Lucida Handwriting;
+}
+
+h2.allies { color:#1ff;
+text-align: center;
+margin: 1em;
+font-family: Lucida Handwriting;
+}
+
+h1.villains { color:#555;
+text-align: center;
+margin: 1em;
+font-family:Lucida Handwriting;
+}
+
+h2.villains { color:#555;
+text-align: center;
+margin: 1em;
+font-family: Lucida Handwriting;
+}
+
+img.allies{ width: 300px;
+height: 300px;
+margin-right: none;
+margin-left: 2em;
+}
+
+.jumbotron{margin-left: none;
+margin-right: 2em;
+background-color: #aaa;
+}
+
+p.splinter{margin-left: 2em;
+}
+
+h3.splinter{margin-left: 1em;
+}
+
+
