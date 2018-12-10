@@ -1,2 +1,10 @@
 # Ultimate-Tic-Tac-Toe
-An advanced version of the popular game Tic-Tac-Toe written both in Java and JavaScript
+-Explanation 
+
+An advanced version of the popular game Tic-Tac-Toe written both in Java and JavaScript. 
+
+-Java Libraries Used
+
+*UTIL (for data structures)
+
+*JAVAX.SWING (for GUI)
